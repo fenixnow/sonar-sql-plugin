@@ -99,7 +99,7 @@ public class SqlCoverCoverageSensor extends BaseSensor implements Sensor {
 	@Override
 	public void execute(final SensorContext context) {
 		final String coverageFile = context.config().get(Constants.TSQL_SQLCOVER_PATH)
-				.orElse(Constants.TSQL_SQLCOVER_PATH_DEFAULT).toLowerCase();
+				.orElse(Constants.TSQL_SQLCOVER_PATH_DEFAULT);
 		LOGGER.debug("SQL coverage path - {}", coverageFile);
 		final String baseDir = context.fileSystem().baseDir().getAbsolutePath();
 		LOGGER.debug("SQl base dir - {}", baseDir);
