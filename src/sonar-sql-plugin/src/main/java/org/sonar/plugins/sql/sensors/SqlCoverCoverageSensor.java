@@ -101,7 +101,7 @@ public class SqlCoverCoverageSensor extends BaseSensor implements Sensor {
 		final String coverageFile = context.config().get(Constants.TSQL_SQLCOVER_PATH)
 				.orElse(Constants.TSQL_SQLCOVER_PATH_DEFAULT).toLowerCase();
 		final String baseDir = context.fileSystem().baseDir().getAbsolutePath();
-		LOGGER.debug("debug");
+		LOGGER.info("debug");
 		try {
 			if (Files.exists(Paths.get(coverageFile))) {
 				readCoverageReport(context, Paths.get(coverageFile));
