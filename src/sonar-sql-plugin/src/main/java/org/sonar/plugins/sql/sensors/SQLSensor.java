@@ -46,6 +46,7 @@ public class SQLSensor implements Sensor {
     @Override
     public void execute(final SensorContext context) {
 
+        LOGGER.debug("Старт начала сенсора sensor");
         final Configuration config = context.config();
 
         final String dialect = config.get(Constants.PLUGIN_SQL_DIALECT).orElse("tsql").toUpperCase();
